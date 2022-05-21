@@ -1,0 +1,81 @@
+@import 'vars'; 
+    .edit-account{
+        width: 60%;
+        height: 100vh;
+        margin: 4px auto 4px auto;
+        display: grid;
+        place-items: center;
+     
+    
+    }
+    .edit-account_container {
+        width: 350px;
+        height: 400px;
+        padding: 0 0 50px 12px;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--beige-medio);
+        border-radius: 18px;
+        justify-content: space-around;
+
+    }
+
+    .edit-account_container h1 {
+        font-size: var(--font-max);
+        margin-bottom: 15px;
+        text-align: start;
+    }
+   
+       
+    .form div{
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    label {
+        font-size: var(--font-mid);
+        font-weight: 300;
+        padding-left: 8px;
+    }
+    .value {
+        padding-left: 8px;
+        color: var(--gris-medio);
+        outline: none;
+        margin-top: 10px;
+        margin-bottom: 35px;
+
+    }
+   .edit-account_submit{
+        height: 45px;
+        width: 350px;
+        padding: 12px;
+        background-color: var(--white);
+        border: 1px solid var(--crema-rosado);
+        border-radius: 8px;
+        color: var(--crema-rosado);
+        font-weight: bold;
+        font-size: 15px;
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+    @media (max-width: 640px){
+    .edit-account{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .edit-account_container {
+        width: 80vw;
+        height: 70vh;
+    }
+    .edit-account_container h1 {
+        margin-top: 30px;
+        margin-left: 30px;
+    }
+   
+    .edit-account_submit {
+        width: 320px;
+    }
+    }

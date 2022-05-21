@@ -1,0 +1,35 @@
+@import 'vars';
+
+    .order {
+        height: 60px;
+        display:grid;
+        grid-template-columns: 100px 1fr 10px;
+        
+    }
+
+    .order p:nth-child(1) {
+        flex-direction: column;
+        display: flex;
+    justify-content: center;
+    }
+    .order p:nth-child(2) {
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        justify-content: end;
+        padding-right: 10px;
+    }
+
+    .order p span:nth-child(1){
+        font-weight: bold;
+    }
+
+    .order figure {
+        display: grid;
+        align-items: center;
+    }
+    .order figure img {
+        width: 8px;
+    
+    }
+
