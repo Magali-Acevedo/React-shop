@@ -1,0 +1,33 @@
+@import 'vars';
+    .ProductItem {
+        width: 250px; 
+    }
+    .ProductItem img {
+        width: 100%;
+        border-radius: 20px;
+        object-fit: cover;
+    }
+    .ProductItem figure img {
+        width: 30px;
+    }
+    .ProductItem p:nth-child(1) {
+        font-weight: bold;
+
+    }
+    .ProductItem p:nth-child(2){
+        color: var(--dulce-de-leche);
+    }
+    .ProductItem-description {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 4px;
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+    @media(max-width:640px) {
+        .ProductItem {
+            width: 140px;
+            
+        }
+    }

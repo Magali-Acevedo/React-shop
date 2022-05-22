@@ -15,13 +15,22 @@ module.exports = {
     mode:'development',
     resolve: {
         extensions:['.js', '.jsx'],
+        alias: {
+            '@components' : path.resolve(__dirname, 'src/components/'),
+            '@containers': path.resolve(__dirname, 'src/containers/'),
+            '@pages': path.resolve(__dirname, 'src/pages/'),
+            '@styles': path.resolve(__dirname, 'src/styles/'),
+            '@icons': path.resolve(__dirname, 'src/assets/icons/'),
+            
+        }
 
     },
     module: {
         rules:[
             {test: /\.(js|jsx)$/,use:'babel-loader'},
             {test:/\.html$/,use:'html-loader'},
-            {test:/\.(css|scss)$/, use:['style-loader','css-loader','sass-loader']}
+            {test:/\.(css|scss)$/, use:['style-loader','css-loader','sass-loader']},
+            {test:/\.(png|svg|jpg|gif)$/,type:'asset'}
         ]
     },
     plugins: [

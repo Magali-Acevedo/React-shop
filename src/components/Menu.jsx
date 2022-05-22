@@ -1,19 +1,17 @@
 import React from 'react';
-import '../styles/Menu.scss'
+import '@styles/Menu.scss'
 const Menu = ()=> {
     return (
-        <div class="Menu">
+        <div className="Menu">
             <ul>
             <li>
-                <a href="/" class="title">Mis ordenes</a>
+                <a href="/" className="title">My orders</a>
             </li>
-        
             <li>
-                <a href="/">Mi cuenta</a>
+                <a href="/">My account</a>
             </li>
-        
             <li>
-                <a href="/">Cerrar sesión</a>
+                <a href="/">Sign out</a>
             </li>
             </ul>
         </div>

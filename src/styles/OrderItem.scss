@@ -1,6 +1,6 @@
 @import 'vars';
     .OrderItem {
-        padding: 20px 10px 0 0;
+        padding: 20px 10px 0 20px;
         display: grid;
         grid-template-columns: auto 1fr auto auto;
         align-items: center;
@@ -15,7 +15,7 @@
         justify-self: end;
     }
     .OrderItem img:nth-child(1){
-        width: 100px;
+        width: 80px;
         border-radius: 12px;
     }
     .OrderItem img:nth-child(4){
