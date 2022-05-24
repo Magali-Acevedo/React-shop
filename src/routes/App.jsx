@@ -10,26 +10,30 @@ import SendEmail from "@pages/SendEmail";
 import Checkout from "@pages/Checkout";
 import Orders from "@pages/Orders";
 import NotFound from "@pages/NotFound";
+import AppContext from "../Context/AppContext";
+import useInitialState from "../hooks/useInitialState";
 import '@styles/global.css';
 
 function App () {
+    const initialState = useInitialState();
     return(
-        <BrowserRouter>
-        <Layout>
-            <Routes>
-                <Route  path ="/" element = {<Home /> } />
-                <Route  path="/Login" element= {<Login /> } />
-                <Route  path ="/new-password" element = {<NewPassword /> } />
-                <Route path="/create-account" element={<CreateAccount/>} />
-                <Route path="/send-email" element= {<SendEmail/>} />
-                <Route  path = "/edit-account" element= {<EditAccount /> } />
-                <Route path="/checkout" element = {<Checkout/>} />
-                <Route path="/orders" element = {<Orders/>} />
-                <Route path= "*" element = {<NotFound /> } />
-            </Routes>
-        </Layout>
-        </BrowserRouter>
- 
+        <AppContext.Provider value = {initialState} >
+            <BrowserRouter>
+                <Layout>
+                    <Routes>
+                        <Route path ="/" element = {<Home /> } />
+                        <Route path="/Login" element= {<Login /> } />
+                        <Route path ="/new-password" element = {<NewPassword /> } />
+                        <Route path="/create-account" element={<CreateAccount/>} />
+                        <Route path="/send-email" element= {<SendEmail/>} />
+                        <Route path = "/edit-account" element= {<EditAccount /> } />
+                        <Route path="/checkout" element = {<Checkout/>} />
+                        <Route path="/orders" element = {<Orders/>} />
+                        <Route path= "*" element = {<NotFound /> } />
+                    </Routes>
+                </Layout>
+            </BrowserRouter>
+        </AppContext.Provider>
     );
 }
 export default App;

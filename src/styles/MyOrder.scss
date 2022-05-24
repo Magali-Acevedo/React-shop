@@ -1,66 +1,67 @@
 @import 'vars';
-    .order_container {
-        width: 500px;
-        min-height: 500px;
+    aside {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 380px;
+        min-height: 88vh;
+        position:absolute;
+        right: 0;
+        background-color: var(--white);
+        top: 60px;
+        bottom: 0;
+        border-radius: 6px;
+        border: 1px solid var(--gris-claro);
+    }
+    .MyOrder {
         padding: 15px;
         margin: 0 auto;
     }
-    .order_container h1 {
-        font-size: var(--font-mid);
-        padding-bottom: 50px;
-
+    .MyOrder-title {
+        display:flex;
+        align-items: baseline;
+        padding-bottom: 15px;
     }
-    .order_container-art {
+    .arrow {
+        width: 15px;
+        transform: rotate(180deg);
+    }
+    .MyOrder-title h1 {
+        font-size: var(--font-max);
+        padding-left: 10px;
+    }
+    .MyOrder_container-art {
+        width: 320px;
         height: 60px;
         display: flex;
         justify-content: space-between;
         background-color: var(--gris-claro);
         padding: 20px;
         border-radius: 8px;
-        
+        margin: 30px  auto 0 auto; 
     }
-
-    .order_container-art p:nth-child(1) {
-        flex-direction: column;
-        display: flex;
-    justify-content: center;
-    }
-    .order_container-art p:nth-child(2) {
+    .primary-button{
+        height: 50px;
+        width: 320px;
+        background-color: var(--crema-rosado);
+        border: none;
+        border-radius: 8px;
+        color: var(--white);
+        font-weight: bold;
+        font-size: 15px;
+        margin: 25px auto 20px auto;
+        cursor: pointer;
         display: flex;
         align-items: center;
-        font-weight: bold;
+        justify-content: center;
+    
     }
-
-    .order_container-art p span:nth-child(1){
-        font-weight: bold;
-    }
-    .container-card {
-        padding: 20px 10px 0 0;
-        display: grid;
-        grid-template-columns: 100px 1fr 100px;
-        align-items: center;
-    }
-    .container-card span {
-        padding-left:12px ;
-        font-weight: 200;
-        color: var(--crema-rosado);
-    }
-    .container-card p {
-        font-weight: bold;
-        justify-self: end;
-    }
-
-    .container-card img {
-        width: 100px;
-        border-radius: 12px;
-
-    }
-
     @media(max-width: 640px) {
-        .order_container h1 {
+        .MyOrder h1,
+        .arrow {
             display: none;
         }
-        .order_container-art {
+        .MyOrder-art {
             margin-top: 50px;
         }
     }
